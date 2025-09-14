@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate MacOS Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="desktop">
+    <img src="assets/wallpaper.jpg" id="wallpaper" alt="Wallpaper">
+    
+    <!-- Menu Bar -->
+    <div id="menu-bar">
+      <div class="menu-left">
+        <span id="apple-logo"></span>
+        <span>Finder</span>
+      </div>
+      <div class="menu-right">
+        <span id="clock"></span>
+        <span>Wi-Fi</span>
+        <span>Battery</span>
+      </div>
+    </div>
+    
+    <!-- Dock -->
+    <div id="dock">
+      <img src="assets/icons/finder.png" alt="Finder" class="dock-icon" data-app="https://www.apple.com/finder/">
+      <img src="assets/icons/safari.png" alt="Safari" class="dock-icon" data-app="https://www.apple.com/safari/">
+      <img src="assets/icons/minecraft.png" alt="Minecraft" class="dock-icon" data-app="minecraft">
+    </div>
+    
+    <!-- Windows -->
+    <div class="window" id="appWindow">
+      <div class="title-bar">
+        <button class="close">×</button>
+        <span class="title">App</span>
+      </div>
+      <iframe src="" frameborder="0"></iframe>
+    </div>
 
+    <!-- Minecraft Window -->
+    <div class="window" id="minecraftWindow">
+      <div class="title-bar">
+        <button class="close">×</button>
+        <span class="title">Minecraft Clone</span>
+      </div>
+      <canvas id="minecraftCanvas"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
