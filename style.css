@@ -1,1 +1,96 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'San Francisco', sans-serif;
+  overflow: hidden;
+}
 
+#desktop {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#wallpaper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+#menu-bar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 25px;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  z-index: 10;
+}
+
+#dock {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  background: rgba(0,0,0,0.4);
+  padding: 10px;
+  border-radius: 20px;
+  z-index: 10;
+}
+
+.dock-icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.dock-icon:hover {
+  transform: scale(1.5);
+}
+
+.window {
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  display: none;
+  z-index: 20;
+}
+
+.window iframe {
+  width: 100%;
+  height: calc(100% - 30px);
+  border-radius: 0 0 10px 10px;
+}
+
+.title-bar {
+  height: 30px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.title-bar .close {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#minecraftCanvas {
+  width: 100%;
+  height: calc(100% - 30px);
+  background: #87ceeb;
+  display: block;
+}
